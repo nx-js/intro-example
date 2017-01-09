@@ -2317,7 +2317,7 @@
 	  const config = node[secret.config]
 
 	  for (let paramName in config) {
-	    const param = decodeURI(params[paramName]) || config[paramName].default
+	    const param = params[paramName] || config[paramName].default
 	    if (config[paramName].required && param === undefined) {
 	      throw new Error(`${paramName} is a required parameter`)
 	    }
@@ -2327,14 +2327,12 @@
 	        state[paramName] = undefined
 	      } else if (type === 'number') {
 	        state[paramName] = Number(param)
-	      } else if (type === 'string') {
-	        state[paramName] = String(param)
 	      } else if (type === 'boolean') {
 	        state[paramName] = Boolean(param)
 	      } else if (type === 'date') {
 	        state[paramName] = new Date(param)
 	      } else {
-	        state[paramName] = param
+	        state[paramName] = decodeURI(param)
 	      }
 	    }
 	  }
