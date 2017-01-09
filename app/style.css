@@ -1,0 +1,20 @@
+:host {
+  display: block;
+  max-width: 500px;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  color: white;
+  background-color: #009688;
+  transition: background-color 0.2s ease-out;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+a:hover {
+  background-color: #03615c;
+}
