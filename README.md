@@ -1,7 +1,5 @@
 # Intro example
 
-[Live demo](https://nx-js.github.io/intro-example/)
-
 An introductory app - built with [NX](http://nx-framework.com). It
 features data-binding, client-side routing, and project organization.
 You can find the accompanying `Getting started` tutorial [here](http://www.nx-framework.com/docs/start).
