@@ -15,6 +15,6 @@ a {
   margin-bottom: 6px;
 }
 
-a:hover {
+a.active, a:hover {
   background-color: #03615c;
 }

@@ -1,12 +1,9 @@
 'use strict'
 
-nx.components.app()
-  .use(nx.middlewares.render({
-    template: require('./view.html'),
-    style: require('./style.css')
-  }))
-  .register('intro-app')
+nx.components.app({
+  template: require('./view.html'),
+  style: require('./style.css')
+}).register('intro-app')
 
-nx.component()
-  .use(nx.middlewares.route)
+nx.components.router()
   .register('router-comp')

@@ -1,10 +1,8 @@
 'use strict'
 
-nx.component()
-  .use(nx.middlewares.render({
-    template: require('./view.html')
-  }))
-  .use(nx.middlewares.params({
+nx.components.page({
+  template: require('./view.html'),
+  params: {
     name: {history: true, default: 'World'}
-  }))
-  .register('greeting-comp')
+  }
+}).register('greeting-comp')
