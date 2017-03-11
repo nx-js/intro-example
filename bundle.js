@@ -4015,7 +4015,7 @@
 	nx.components.page({
 	  template: __webpack_require__(83),
 	  params: {
-	    name: {history: true, default: 'World'}
+	    name: {history: true, url: true, default: 'World'}
 	  }
 	}).register('greeting-comp')
 
